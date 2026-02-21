@@ -1,7 +1,8 @@
-# 📘 Core Backend
-> 평소 공부한 것들에 대해 정보의 파편화를 막고자 생성한 저장소입니다.
+# Core Backend
 
-## 🛠 Tech Stack & Focus
+> 백엔드 개발자 기술 지식 저장소. 이 폴더에는 **순수 기술 문서만** 존재합니다.
+
+## Tech Stack & Focus
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
@@ -11,20 +12,21 @@
 
 <br/>
 
-## 📂 Repository Structure
-
-학습한 내용을 주제별로 분류하여 관리하고 있습니다. 각 폴더 링크를 클릭하면 상세 내용을 확인할 수 있습니다.
+## Repository Structure
 
 | Category | Description | Key Topics |
 | :--- | :--- | :--- |
-| **[01-languages](./01-languages)** | 언어의 동작 원리 및 심화 학습 | JVM 구조, GC 튜닝, Kotlin Coroutines |
-| **[02-frameworks](./02-frameworks)** | 프레임워크 핵심 원리 분석 | Spring AOP, JPA 영속성 컨텍스트, Security |
-| **[03-database](./03-database)** | DB 설계 및 쿼리 최적화 | Index 원리, 트랜잭션 격리 수준, Redis 활용 |
-| **[04-architecture](./04-architecture)** | 견고한 소프트웨어를 위한 설계 | Clean Architecture, OOP, Design Patterns |
-| **[05-infrastructure](./05-infrastructure)** | 배포 및 운영 환경 구축 | Docker, CI/CD Pipeline, AWS |
-| **[06-computer-science](./06-computer-science)** | CS 전공 지식 (Network/OS) | HTTP/HTTPS, Thread vs Process, 자료구조 |
-| **[07-trouble-shooting](./07-trouble-shooting)** | **🚨 에러 해결 및 성능 개선 로그** | N+1 문제 해결, 동시성 이슈 처리, OOM 분석 |
+| **[01-languages](./01-languages)** | 언어의 동작 원리 및 심화 학습 | JVM 구조, GC 튜닝, Java 동시성, Kotlin Coroutines |
+| **[02-frameworks](./02-frameworks)** | 프레임워크 핵심 원리 분석 | Spring IoC/DI, MVC, JPA, Security, AOP |
+| **[03-database](./03-database)** | DB 설계 및 쿼리 최적화 | Index 원리, 트랜잭션, MVCC, Redis, 스케일링 |
+| **[04-architecture](./04-architecture)** | 견고한 소프트웨어를 위한 설계 | SOLID, Clean Architecture, Design Patterns, MSA |
+| **[05-infrastructure](./05-infrastructure)** | 배포 및 운영 환경 구축 | Docker, Kubernetes, CI/CD, 모니터링 |
+| **[06-computer-science](./06-computer-science)** | CS 전공 지식 (Network/OS) | TCP/IP, HTTP/HTTPS, Process/Thread, 메모리 관리 |
+| **[07-trouble-shooting](./07-trouble-shooting)** | 에러 해결 및 성능 개선 로그 | N+1 문제 해결, 동시성 이슈, OOM 분석 |
 | **[08-algorithm](./08-algorithm)** | 알고리즘 및 코딩 테스트 풀이 | Baekjoon, LeetCode 풀이 및 해설 |
-| **[09-test-tools](./09-test-tools)** | 테스트 관련 도구 모음 | Load Test ...  |
+| **[09-system-design](./09-system-design)** | 대규모 시스템 설계 | URL Shortener, Rate Limiter, Chat System |
+| **[10-test-tools](./10-test-tools)** | 테스트 관련 도구 모음 | k6 Load Test |
+| **[11-behavioral](./11-behavioral)** | 행동면접 준비 | STAR 기법, 경험 정리 |
+| **[12-ai-agents](./12-ai-agents)** | AI 도구 및 에이전트 | Claude Code |
 
 <br/>
