@@ -1,16 +1,17 @@
-# Spring WebFlux + Coroutine 통합 패턴
-
-> 관련 문서:
-> - [코루틴 기초](../../../01-languages/kotlin/코루틴-기초.md)
-> - [코루틴 동시성 패턴](../../../01-languages/kotlin/코루틴-동시성.md)
-> - [스레드 모델](../../../06-computer-science/os/스레드-모델.md)
-
+---
+tags: [spring, webflux, coroutine]
+status: completed
+created: 2026-03-02
 ---
 
-## WebFlux에서 Coroutine을 쓰는 이유
+# Spring WebFlux + Coroutine 통합 패턴
 
-Spring WebFlux는 Reactor(Mono/Flux) 기반.
-Kotlin Coroutine은 이를 `suspend` 함수로 추상화하여 가독성 향상.
+## 핵심 개념
+
+Spring **WebFlux**는 Reactor(Mono/Flux) 기반의 비동기 웹 프레임워크다. Kotlin **Coroutine**은 이를 `suspend` 함수로 추상화하여 가독성을 크게 향상시킨다. Reactor의 선언적 체이닝 대신 순차적 코드 스타일로 동일한 비동기 동작을 구현할 수 있다.
+
+> [!note] WebFlux에서 Coroutine을 쓰는 이유
+> Reactor의 `zipWith`, `flatMap` 등 선언적 체이닝은 복잡한 로직에서 가독성이 떨어진다. Coroutine의 `suspend` 함수를 사용하면 동일한 비동기 동작을 순차적 코드처럼 작성할 수 있다.
 
 ```kotlin
 // Reactor 방식
@@ -28,9 +29,9 @@ suspend fun getProduct(id: Long): Product {
 }
 ```
 
----
+## 동작 원리
 
-## 안티패턴: 루프 내 awaitSingle()
+### 안티패턴: 루프 내 awaitSingle()
 
 ```kotlin
 // 잘못된 패턴 - 직렬 실행
@@ -45,14 +46,12 @@ suspend fun fetchProducts(chunks: List<List<Long>>): List<Product> {
 // 120 chunks × 250ms = 30초
 ```
 
-**왜 문제인가:**
-- `awaitSingle()`은 스레드를 blocking하지 않음 (suspend)
-- 하지만 이 코루틴은 이전 청크 완료 후에만 다음 청크 진행
-- 네트워크 I/O 지연이 청크 수만큼 직렬로 누적
+> [!warning] 루프 내 awaitSingle()은 직렬 실행된다
+> `awaitSingle()`은 스레드를 blocking하지 않지만(suspend), 이 코루틴은 이전 청크 완료 후에만 다음 청크로 진행한다. 네트워크 I/O 지연이 청크 수만큼 직렬로 누적된다.
 
----
+### 올바른 패턴: Scatter-Gather
 
-## 올바른 패턴: Scatter-Gather
+[[2-Areas/backend/01-languages/kotlin/코루틴-동시성|코루틴-동시성]]의 `async`/`awaitAll`을 활용한 병렬 처리 패턴이다.
 
 ```kotlin
 // 개선된 패턴 - 병렬 실행
@@ -70,11 +69,9 @@ suspend fun fetchProducts(chunks: List<List<Long>>): List<Product> {
 // max(각 청크 응답시간) ≈ 2초
 ```
 
----
+### 이중 병렬화 (기획전 성능 개선 사례)
 
-## 이중 병렬화 (기획전 성능 개선 사례)
-
-**상황**: 3,000개 상품 기획전 조회 (30s → 2s)
+**상황**: 3,000개 상품 기획전 조회 (30s -> 2s)
 
 ```kotlin
 suspend fun getExhibition(exhibitionId: Long): ExhibitionResponse {
@@ -107,9 +104,7 @@ suspend fun getExhibition(exhibitionId: Long): ExhibitionResponse {
 }
 ```
 
----
-
-## Cache Refresh Ahead 전략
+### Cache Refresh Ahead 전략
 
 단순 TTL 방식의 문제:
 ```
@@ -117,6 +112,9 @@ TTL 만료 시점:
   요청 → 캐시 miss → DB 조회 (느림) → 응답 지연 (Latency Spike)
   동시 다수 요청 → Cache Stampede (DB 과부하)
 ```
+
+> [!tip] Refresh Ahead로 Latency Spike 방지
+> TTL 만료 전에 백그라운드에서 미리 캐시를 갱신하면, 사용자는 항상 캐시 hit을 경험한다. Cache Stampede도 방지된다.
 
 Refresh Ahead 해결책:
 ```kotlin
@@ -142,13 +140,9 @@ suspend fun getExhibitionWithCache(id: Long): Exhibition {
 }
 ```
 
-**장점**: 사용자는 항상 캐시 hit. TTL 만료 전에 미리 갱신하므로 Latency Spike 없음.
+### WebFlux vs Spring MVC + Virtual Thread
 
----
-
-## WebFlux vs Spring MVC + Virtual Thread
-
-### WebFlux가 여전히 필요한 경우
+#### WebFlux가 여전히 필요한 경우
 
 **Backpressure**: 생산 속도 > 소비 속도일 때 생산자 제어
 
@@ -172,9 +166,7 @@ fun getProducts(): List<Product> {
 | SSE, WebSocket | WebFlux 유지 |
 | 기존 WebFlux 코드베이스 | 유지 (마이그레이션 이유 없음) |
 
----
-
-## 주의사항: WebFlux 스레드에서 Blocking 호출
+### 주의사항: WebFlux 스레드에서 Blocking 호출
 
 ```kotlin
 // 위험 - event loop 스레드 blocking
@@ -192,3 +184,9 @@ suspend fun getProducts(): List<Product> {
     }
 }
 ```
+
+## 관련 문서
+
+- [[2-Areas/backend/01-languages/kotlin/코루틴-동시성|코루틴-동시성]]
+- [[2-Areas/backend/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]]
+- [[2-Areas/backend/01-languages/kotlin/코루틴-기초|코루틴-기초]]

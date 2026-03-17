@@ -1,4 +1,12 @@
-**1bit와 2수(== 디지털)**
+---
+tags: [computer-science, basic]
+status: draft
+created: 2026-01-11
+---
+
+# Bit & Byte
+
+**1bit와 2진수(== 디지털)**
 - 1bit: '전기 스위치 1개'
   - 1: 전기가 흐르는 `on`상태
   - 0: 전기가 흐르지 않는 `off`상태
@@ -14,12 +22,17 @@
 
 **컴퓨터에서 글자를 다루는 법**
 
-ASCII (American Standard Code for Information Interchange)
+**ASCII** (American Standard Code for Information Interchange)
+> [!note]
 > 미국에서 사용하는 표준 코드 체계
 
 영문 대문자 `A` (65(10), 0x41)
 
 **컴퓨터가 사진을 다루는 방법**
-- 화소(Pixel): 모니터 화면 상 '점' 하나.
+- 화소(**Pixel**): 모니터 화면 상 '점' 하나.
 - 여러 점들을 모아 사진을 이룰 수 있음.
 - 화소 하나를 표현하는데 8bit, 16bit, 24bit (RGB), 32bit (RGBA)가 필요할 수 있다.
+
+## 관련 문서
+- [[2-Areas/backend/01-languages/java/JVM|JVM]]
+- [[2-Areas/backend/06-computer-science/os/프로세스,스레드|프로세스,스레드]]

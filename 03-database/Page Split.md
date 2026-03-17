@@ -1,3 +1,9 @@
+---
+tags: [database, page-split]
+status: draft
+created: 2025-12-06
+---
+
 # Page Split
 InnoDB 기준 Page는 16KB로 고정되어있다.
 
@@ -35,3 +41,8 @@ Page에 16KB가 꽉 찼을 경우 페이지 분할이 발생한다.
 - UUID v7 : `Unix Timestamp` + `Random`
 - ULID : `Timestamp` + 80 bit `Random`
 - TSID : `Time` + `Node ID` + `Sequence`
+
+## 관련 문서
+- [[인덱스]]
+- [[B-Tree, B+Tree]]
+- [[스토리지엔진]]
