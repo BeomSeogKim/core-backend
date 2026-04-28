@@ -107,6 +107,6 @@ public class UserController {
 
 ## 관련 문서
 
-- [[2-Areas/backend/06-computer-science/network/HTTP]]
-- [[2-Areas/backend/06-computer-science/network/CORS]]
-- [[2-Areas/backend/02-frameworks/Spring/web/Spring-MVC]]
+- [[dev/06-computer-science/network/HTTP]]
+- [[dev/06-computer-science/network/CORS]]
+- [[dev/02-frameworks/Spring/web/Spring-MVC]]

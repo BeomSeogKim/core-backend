@@ -68,6 +68,6 @@ public class WebConfig implements WebMvcConfigurer {
 ```
 
 ## 관련 문서
-- [[2-Areas/backend/02-frameworks/Next.js/Route|Route]]
+- [[dev/02-frameworks/Next.js/Route|Route]]
 - [[SFTP]]
-- [[2-Areas/backend/06-computer-science/network/CORS|CORS]]
+- [[dev/06-computer-science/network/CORS|CORS]]

@@ -47,7 +47,7 @@ Java JDBC에서 SQL을 실행하는 인터페이스는 **Statement**, **Prepared
 - 복잡한 비즈니스 로직을 DB에서 실행
 
 > [!note] Statement 계층 구조
-> `Statement` → `PreparedStatement` → `CallableStatement` 순서로 상속 관계를 이룬다. PreparedStatement는 Statement를 확장하고, CallableStatement는 PreparedStatement를 확장한다. 이 인터페이스들은 [[2-Areas/backend/01-languages/java/JVM|JVM]] 위에서 JDBC Driver를 통해 구현된다.
+> `Statement` → `PreparedStatement` → `CallableStatement` 순서로 상속 관계를 이룬다. PreparedStatement는 Statement를 확장하고, CallableStatement는 PreparedStatement를 확장한다. 이 인터페이스들은 [[dev/01-languages/java/JVM|JVM]] 위에서 JDBC Driver를 통해 구현된다.
 
 ## 코드 예시
 
@@ -79,10 +79,10 @@ BigDecimal total = cstmt.getBigDecimal(2);
 ```
 
 > [!tip] Connection Pool과 PreparedStatement 캐싱
-> HikariCP 등의 Connection Pool은 PreparedStatement를 캐싱하여 재사용한다. 이를 통해 SQL 파싱 비용을 줄이고, [[2-Areas/backend/03-database/트랜잭션|트랜잭션]] 처리 성능을 향상시킬 수 있다.
+> HikariCP 등의 Connection Pool은 PreparedStatement를 캐싱하여 재사용한다. 이를 통해 SQL 파싱 비용을 줄이고, [[dev/03-database/트랜잭션|트랜잭션]] 처리 성능을 향상시킬 수 있다.
 
 ## 관련 문서
 
-- [[2-Areas/backend/03-database/트랜잭션|트랜잭션]] — JDBC 트랜잭션 관리
-- [[2-Areas/backend/03-database/스토리지엔진|스토리지엔진]] — DB 내부의 SQL 처리 구조
-- [[2-Areas/backend/01-languages/java/JVM|JVM]] — JDBC Driver와 JVM 실행 환경
+- [[dev/03-database/트랜잭션|트랜잭션]] — JDBC 트랜잭션 관리
+- [[dev/03-database/스토리지엔진|스토리지엔진]] — DB 내부의 SQL 처리 구조
+- [[dev/01-languages/java/JVM|JVM]] — JDBC Driver와 JVM 실행 환경

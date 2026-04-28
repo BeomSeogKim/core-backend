@@ -85,6 +85,6 @@ udpSocket.receive(packet);                      // 연결 없이 수신
 
 ## 관련 문서
 
-- [[2-Areas/backend/06-computer-science/network/OSI-7-Layer]]
-- [[2-Areas/backend/06-computer-science/network/HTTP]]
-- [[2-Areas/backend/06-computer-science/os/프로세스,스레드]]
+- [[dev/06-computer-science/network/OSI-7-Layer]]
+- [[dev/06-computer-science/network/HTTP]]
+- [[dev/06-computer-science/os/프로세스,스레드]]

@@ -59,6 +59,6 @@ created: 2026-04-06
 
 ## 관련 문서
 
-- [[2-Areas/backend/06-computer-science/network/TCP-UDP]]
-- [[2-Areas/backend/06-computer-science/network/HTTP]]
-- [[2-Areas/backend/06-computer-science/network/CORS]]
+- [[dev/06-computer-science/network/TCP-UDP]]
+- [[dev/06-computer-science/network/HTTP]]
+- [[dev/06-computer-science/network/CORS]]

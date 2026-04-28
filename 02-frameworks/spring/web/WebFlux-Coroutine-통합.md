@@ -51,7 +51,7 @@ suspend fun fetchProducts(chunks: List<List<Long>>): List<Product> {
 
 ### 올바른 패턴: Scatter-Gather
 
-[[2-Areas/backend/01-languages/kotlin/코루틴-동시성|코루틴-동시성]]의 `async`/`awaitAll`을 활용한 병렬 처리 패턴이다.
+[[dev/01-languages/kotlin/코루틴-동시성|코루틴-동시성]]의 `async`/`awaitAll`을 활용한 병렬 처리 패턴이다.
 
 ```kotlin
 // 개선된 패턴 - 병렬 실행
@@ -187,6 +187,6 @@ suspend fun getProducts(): List<Product> {
 
 ## 관련 문서
 
-- [[2-Areas/backend/01-languages/kotlin/코루틴-동시성|코루틴-동시성]]
-- [[2-Areas/backend/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]]
-- [[2-Areas/backend/01-languages/kotlin/코루틴-기초|코루틴-기초]]
+- [[dev/01-languages/kotlin/코루틴-동시성|코루틴-동시성]]
+- [[dev/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]]
+- [[dev/01-languages/kotlin/코루틴-기초|코루틴-기초]]

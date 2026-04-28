@@ -214,5 +214,5 @@ await Promise.all(
 ```
 
 ## 관련 문서
-- [[2-Areas/backend/01-languages/java/JVM|JVM]]
-- [[2-Areas/backend/01-languages/java/Class|Class]]
+- [[dev/01-languages/java/JVM|JVM]]
+- [[dev/01-languages/java/Class|Class]]

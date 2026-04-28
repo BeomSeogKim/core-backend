@@ -103,4 +103,4 @@ public class SftpUploader {
 
 ## 관련 문서
 - [[CORS]]
-- [[2-Areas/backend/06-computer-science/network/CORS|CORS]]
+- [[dev/06-computer-science/network/CORS|CORS]]

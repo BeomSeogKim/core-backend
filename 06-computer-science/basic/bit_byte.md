@@ -34,5 +34,5 @@ created: 2026-01-11
 - 화소 하나를 표현하는데 8bit, 16bit, 24bit (RGB), 32bit (RGBA)가 필요할 수 있다.
 
 ## 관련 문서
-- [[2-Areas/backend/01-languages/java/JVM|JVM]]
-- [[2-Areas/backend/06-computer-science/os/프로세스,스레드|프로세스,스레드]]
+- [[dev/01-languages/java/JVM|JVM]]
+- [[dev/06-computer-science/os/프로세스,스레드|프로세스,스레드]]

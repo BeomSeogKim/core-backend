@@ -78,4 +78,4 @@ ServiceA.methodA() ─── 트랜잭션 T1 ─── 일시 중단 ─── T
 
 - [[AOP]] — @Transactional의 프록시 기반 동작
 - [[Bean]] — 트랜잭션 관리 Bean
-- [[2-Areas/backend/03-database/트랜잭션|트랜잭션]] — DB 트랜잭션 격리 수준
+- [[dev/03-database/트랜잭션|트랜잭션]] — DB 트랜잭션 격리 수준

@@ -117,4 +117,4 @@ Map<String, Integer> table = new Hashtable<>();  // ConcurrentHashMap 사용 권
 
 - [[Collections-Framework]]
 - [[equals와-hashCode]]
-- [[2-Areas/backend/06-computer-science/os/스핀락-뮤텍스-세마포어|스핀락-뮤텍스-세마포어]]
+- [[dev/06-computer-science/os/스핀락-뮤텍스-세마포어|스핀락-뮤텍스-세마포어]]

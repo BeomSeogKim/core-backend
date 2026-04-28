@@ -143,5 +143,5 @@ Old Generation이 가득 차면 **Major GC(Full GC)**가 발생한다.
 ## 관련 문서
 
 - [[JVM]] — JVM 전체 구조
-- [[2-Areas/backend/06-computer-science/os/가상-메모리|가상-메모리]] — JVM Heap이 올라가는 OS 가상 메모리
-- [[2-Areas/backend/06-computer-science/os/프로세스,스레드|프로세스,스레드]] — GC 스레드와 애플리케이션 스레드
+- [[dev/06-computer-science/os/가상-메모리|가상-메모리]] — JVM Heap이 올라가는 OS 가상 메모리
+- [[dev/06-computer-science/os/프로세스,스레드|프로세스,스레드]] — GC 스레드와 애플리케이션 스레드

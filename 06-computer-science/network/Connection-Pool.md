@@ -130,6 +130,6 @@ public class UserRepository {
 
 ## 관련 문서
 
-- [[2-Areas/backend/06-computer-science/network/TCP-UDP]]
-- [[2-Areas/backend/03-database/DB-Connection]]
-- [[2-Areas/backend/02-frameworks/spring/data/JPA-기초]]
+- [[dev/06-computer-science/network/TCP-UDP]]
+- [[dev/03-database/DB-Connection]]
+- [[dev/02-frameworks/spring/data/JPA-기초]]

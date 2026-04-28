@@ -45,7 +45,7 @@ Single-flight (개선):
 
 | 상황 | 문제 | Single-flight 효과 |
 |------|------|------------------|
-| [[2-Areas/backend/06-computer-science/cache/캐시|캐시]] 미스 | 동시에 DB 쿼리 폭발 ([[2-Areas/backend/06-computer-science/cache/Cache-Refresh-Ahead|Cache Stampede]]) | 쿼리 1번만 실행 |
+| [[dev/06-computer-science/cache/캐시|캐시]] 미스 | 동시에 DB 쿼리 폭발 ([[dev/06-computer-science/cache/Cache-Refresh-Ahead|Cache Stampede]]) | 쿼리 1번만 실행 |
 | 토큰 만료 | 동시에 토큰 갱신 요청 중복 | 갱신 1번만 실행 |
 | 외부 API 호출 | 동일 리소스 중복 호출 | 호출 1번만 실행 |
 
@@ -119,5 +119,5 @@ try {
 ## 관련 문서
 
 - [[Exponential-Backoff-Circuit-Breaker]]
-- [[2-Areas/backend/06-computer-science/cache/캐시|캐시]]
-- [[2-Areas/backend/06-computer-science/cache/Cache-Refresh-Ahead|Cache-Refresh-Ahead]]
+- [[dev/06-computer-science/cache/캐시|캐시]]
+- [[dev/06-computer-science/cache/Cache-Refresh-Ahead|Cache-Refresh-Ahead]]

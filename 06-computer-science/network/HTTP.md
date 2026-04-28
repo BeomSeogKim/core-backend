@@ -88,7 +88,7 @@ Mono<String> response = client.get()
 
 ## 관련 문서
 
-- [[2-Areas/backend/06-computer-science/network/TCP-UDP]]
-- [[2-Areas/backend/06-computer-science/network/OSI-7-Layer]]
-- [[2-Areas/backend/06-computer-science/network/REST-API]]
-- [[2-Areas/backend/06-computer-science/network/KeepAlive]]
+- [[dev/06-computer-science/network/TCP-UDP]]
+- [[dev/06-computer-science/network/OSI-7-Layer]]
+- [[dev/06-computer-science/network/REST-API]]
+- [[dev/06-computer-science/network/KeepAlive]]

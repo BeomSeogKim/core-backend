@@ -104,4 +104,4 @@ for (int i = 0; i < A.length - 1; i++) {
 
 - [[비트 연산]]
 - [[정렬]]
-- [[2-Areas/backend/08-algorithm/자료구조/배열]]
+- [[dev/08-algorithm/자료구조/배열]]

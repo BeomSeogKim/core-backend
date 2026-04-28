@@ -182,4 +182,4 @@ s = s + " world";  // 새 String 객체 생성 (원본 불변)
 - [[스핀락-뮤텍스-세마포어]]
 - [[프로세스,스레드]]
 - [[데드락]]
-- [[2-Areas/backend/01-languages/java/concurrency/volatile과-메모리-가시성|volatile과-메모리-가시성]]
+- [[dev/01-languages/java/concurrency/volatile과-메모리-가시성|volatile과-메모리-가시성]]

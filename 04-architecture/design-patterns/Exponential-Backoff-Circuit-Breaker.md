@@ -162,5 +162,5 @@ async getAccessToken(): Promise<string> {
 ## 관련 문서
 
 - [[Single-flight-Pattern]]
-- [[2-Areas/backend/06-computer-science/cache/캐시|캐시]]
-- [[2-Areas/backend/04-architecture/system-architecture/멀티채널-분산처리|멀티채널-분산처리]]
+- [[dev/06-computer-science/cache/캐시|캐시]]
+- [[dev/04-architecture/system-architecture/멀티채널-분산처리|멀티채널-분산처리]]

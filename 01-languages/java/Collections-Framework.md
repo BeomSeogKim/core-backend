@@ -82,5 +82,5 @@ HashSet은 내부적으로 HashMap을 사용하며, 값을 Key로, 더미 객체
 ## 관련 문서
 
 - [[HashMap-HashTable-ConcurrentHashMap]]
-- [[2-Areas/backend/06-computer-science/os/캐시의-지역성-원리|캐시의-지역성-원리]]
+- [[dev/06-computer-science/os/캐시의-지역성-원리|캐시의-지역성-원리]]
 - [[JVM]] — 객체가 저장되는 Heap 영역

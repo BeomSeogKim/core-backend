@@ -103,4 +103,4 @@ export async function POST(request: NextRequest) {
 > App Router에서 `route.ts`와 `page.tsx`는 같은 디렉토리에 공존할 수 없다. API 엔드포인트는 반드시 별도 경로로 분리해야 한다.
 
 ## 관련 문서
-- [[2-Areas/backend/06-computer-science/network/CORS|CORS]]
+- [[dev/06-computer-science/network/CORS|CORS]]

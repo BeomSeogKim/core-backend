@@ -98,5 +98,5 @@ public class OrderService {
 ## 관련 문서
 
 - [[AOP]] — @Async의 프록시 기반 동작
-- [[2-Areas/backend/06-computer-science/os/동기-비동기-블로킹-논블로킹|동기-비동기-블로킹-논블로킹]] — OS 관점의 동기/비동기
+- [[dev/06-computer-science/os/동기-비동기-블로킹-논블로킹|동기-비동기-블로킹-논블로킹]] — OS 관점의 동기/비동기
 - [[IoC-DI]]

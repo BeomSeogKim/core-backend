@@ -352,7 +352,7 @@ Kafka 공식 도구인 `kafka-metadata.sh`를 사용하여 마이그레이션할
 
 ## 관련 문서
 
-- [[2-Areas/backend/05-infrastructure/kafka/Kafka 아키텍처와 동작 원리|Kafka 아키텍처와 동작 원리]] — Kafka 전체 구조 및 동작
-- [[2-Areas/backend/05-infrastructure/kafka/Kafka Exactly-once Semantics|Kafka Exactly-once Semantics]] — Transaction Coordinator와 메타데이터 관리
-- [[2-Areas/backend/05-infrastructure/kafka/Kafka DLQ와 에러 처리|Kafka DLQ와 에러 처리]] — 에러 처리 전략
-- [[2-Areas/backend/04-architecture/마이크로서비스|마이크로서비스]] — 분산 시스템 코디네이션
+- [[dev/05-infrastructure/kafka/Kafka 아키텍처와 동작 원리|Kafka 아키텍처와 동작 원리]] — Kafka 전체 구조 및 동작
+- [[dev/05-infrastructure/kafka/Kafka Exactly-once Semantics|Kafka Exactly-once Semantics]] — Transaction Coordinator와 메타데이터 관리
+- [[dev/05-infrastructure/kafka/Kafka DLQ와 에러 처리|Kafka DLQ와 에러 처리]] — 에러 처리 전략
+- [[dev/04-architecture/마이크로서비스|마이크로서비스]] — 분산 시스템 코디네이션

@@ -397,7 +397,7 @@ Producer 재시작 (PID=2, txn.id="order-processor-1")  ← 같은 txn.id
 
 ## 관련 문서
 
-- [[2-Areas/backend/05-infrastructure/kafka/Kafka 아키텍처와 동작 원리|Kafka 아키텍처와 동작 원리]] — Kafka 전체 구조 및 동작
-- [[2-Areas/backend/05-infrastructure/kafka/Kafka DLQ와 에러 처리|Kafka DLQ와 에러 처리]] — 실패 메시지 처리 전략
-- [[2-Areas/backend/05-infrastructure/kafka/Kafka 메타데이터 관리, Zookeeper에서 KRaft로|Zookeeper에서 KRaft로]] — 클러스터 메타데이터 관리
-- [[2-Areas/backend/03-database/트랜잭션|트랜잭션]] — DB 트랜잭션과의 비교
+- [[dev/05-infrastructure/kafka/Kafka 아키텍처와 동작 원리|Kafka 아키텍처와 동작 원리]] — Kafka 전체 구조 및 동작
+- [[dev/05-infrastructure/kafka/Kafka DLQ와 에러 처리|Kafka DLQ와 에러 처리]] — 실패 메시지 처리 전략
+- [[dev/05-infrastructure/kafka/Kafka 메타데이터 관리, Zookeeper에서 KRaft로|Zookeeper에서 KRaft로]] — 클러스터 메타데이터 관리
+- [[dev/03-database/트랜잭션|트랜잭션]] — DB 트랜잭션과의 비교

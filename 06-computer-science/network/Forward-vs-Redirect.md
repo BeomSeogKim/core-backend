@@ -111,6 +111,6 @@ request.getRequestDispatcher("/new-url").forward(request, response);  // Forward
 
 ## 관련 문서
 
-- [[2-Areas/backend/06-computer-science/network/HTTP]]
-- [[2-Areas/backend/06-computer-science/network/TCP-UDP]]
-- [[2-Areas/backend/02-frameworks/spring/web/DispatcherServlet]]
+- [[dev/06-computer-science/network/HTTP]]
+- [[dev/06-computer-science/network/TCP-UDP]]
+- [[dev/02-frameworks/spring/web/DispatcherServlet]]

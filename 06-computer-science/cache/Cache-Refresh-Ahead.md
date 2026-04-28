@@ -75,7 +75,7 @@ TTL < 1분인 상태에서 동시 요청 100개가 들어오면:
 - 100개 모두 TTL < 1분 감지
 - 100개 모두 백그라운드 갱신 시도 → 미니 Stampede 재발
 
-분산 락으로 하나만 갱신하도록 보장한다. 이는 [[2-Areas/backend/04-architecture/design-patterns/Single-flight-Pattern|Single-flight-Pattern]]과 유사한 개념이다.
+분산 락으로 하나만 갱신하도록 보장한다. 이는 [[dev/04-architecture/design-patterns/Single-flight-Pattern|Single-flight-Pattern]]과 유사한 개념이다.
 
 ### Refresh Ahead vs 일반 Cache Miss에서의 락 차이
 
@@ -184,7 +184,7 @@ suspend fun getExhibition(id: Long): Exhibition {
 }
 ```
 
-[[2-Areas/backend/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]] 문서에서 Dispatchers.IO의 동작 방식을 확인할 수 있다.
+[[dev/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]] 문서에서 Dispatchers.IO의 동작 방식을 확인할 수 있다.
 
 ### 전략 선택 기준
 
@@ -200,5 +200,5 @@ suspend fun getExhibition(id: Long): Exhibition {
 
 - [[캐시]] - 캐시의 기본 개념과 읽기/쓰기 패턴
 - [[로컬캐시_리모트캐시]] - 로컬 캐시와 리모트 캐시 비교
-- [[2-Areas/backend/04-architecture/design-patterns/Single-flight-Pattern|Single-flight-Pattern]] - 동일 요청 중복 실행 방지 패턴
-- [[2-Areas/backend/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]] - Kotlin 코루틴 Dispatcher 동작 원리
+- [[dev/04-architecture/design-patterns/Single-flight-Pattern|Single-flight-Pattern]] - 동일 요청 중복 실행 방지 패턴
+- [[dev/01-languages/kotlin/코루틴-Dispatcher|코루틴-Dispatcher]] - Kotlin 코루틴 Dispatcher 동작 원리

@@ -34,7 +34,7 @@ withContext(Dispatchers.Default) {
 ```
 
 > [!note] Default Dispatcher 스레드 수가 코어 수인 이유
-> 스레드가 코어 수보다 많으면 [[2-Areas/backend/06-computer-science/os/스레드-모델|Context Switching]]이 발생한다. CPU는 한 번에 하나의 스레드만 실행하므로, 코어 수 = Context Switching 없이 최대 병렬 실행 가능 수이다.
+> 스레드가 코어 수보다 많으면 [[dev/06-computer-science/os/스레드-모델|Context Switching]]이 발생한다. CPU는 한 번에 하나의 스레드만 실행하므로, 코어 수 = Context Switching 없이 최대 병렬 실행 가능 수이다.
 
 #### Dispatchers.IO
 - **스레드 수**: 최대 64개 (기본값), `kotlinx.coroutines.io.parallelism`으로 조정 가능
@@ -128,7 +128,7 @@ val fixedPool = newFixedThreadPoolContext(4, "WorkerPool")
 
 ### Spring WebFlux에서의 Dispatcher
 
-[[2-Areas/backend/02-frameworks/spring/web/WebFlux-Coroutine-통합|WebFlux]] + Coroutine 환경에서는 대부분 Dispatcher를 명시하지 않아도 됨.
+[[dev/02-frameworks/spring/web/WebFlux-Coroutine-통합|WebFlux]] + Coroutine 환경에서는 대부분 Dispatcher를 명시하지 않아도 됨.
 
 ```kotlin
 @GetMapping("/products/{id}")
@@ -154,4 +154,4 @@ suspend fun findById(id: Long): Product {
 
 - [[코루틴-기초]]
 - [[코루틴-동시성]]
-- [[2-Areas/backend/06-computer-science/os/스레드-모델|스레드-모델]]
+- [[dev/06-computer-science/os/스레드-모델|스레드-모델]]

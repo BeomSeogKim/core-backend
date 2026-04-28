@@ -58,7 +58,7 @@ C/C++ 방식
 JVM은 플랫폼별로 다르게 구현됨
 
 > [!warning] JVM과 OS의 관계
-> JVM 자체는 플랫폼 종속적이다. 각 OS(Linux, Windows, macOS)마다 별도의 JVM 구현체가 필요하며, [[2-Areas/backend/06-computer-science/os/프로세스,스레드|프로세스와 스레드]] 모델도 OS에 따라 JVM이 다르게 매핑한다. [[2-Areas/backend/06-computer-science/os/스레드-모델|스레드 모델]]을 참고하면 JVM의 스레드 매핑 전략을 이해할 수 있다.
+> JVM 자체는 플랫폼 종속적이다. 각 OS(Linux, Windows, macOS)마다 별도의 JVM 구현체가 필요하며, [[dev/06-computer-science/os/프로세스,스레드|프로세스와 스레드]] 모델도 OS에 따라 JVM이 다르게 매핑한다. [[dev/06-computer-science/os/스레드-모델|스레드 모델]]을 참고하면 JVM의 스레드 매핑 전략을 이해할 수 있다.
 
 ### 클래스 로더 (Class Loader)
 
@@ -184,6 +184,6 @@ public static void main(java.lang.String[]);
 
 - [[Class]] — 클래스 로딩과 JVM 메모리 구조
 - [[GC]] — Heap 구조와 GC 알고리즘
-- [[2-Areas/backend/06-computer-science/os/프로세스,스레드|프로세스,스레드]] — OS 수준의 프로세스/스레드 개념
-- [[2-Areas/backend/06-computer-science/os/스레드-모델|스레드-모델]] — JVM 스레드와 OS 스레드 매핑
-- [[2-Areas/backend/06-computer-science/os/가상-메모리|가상-메모리]] — JVM Heap이 올라가는 OS 가상 메모리
+- [[dev/06-computer-science/os/프로세스,스레드|프로세스,스레드]] — OS 수준의 프로세스/스레드 개념
+- [[dev/06-computer-science/os/스레드-모델|스레드-모델]] — JVM 스레드와 OS 스레드 매핑
+- [[dev/06-computer-science/os/가상-메모리|가상-메모리]] — JVM Heap이 올라가는 OS 가상 메모리
