@@ -2,8 +2,6 @@
 
 백엔드 개발자 기술 지식 저장소. 순수 기술 문서만 존재한다.
 
-> 알고리즘·코딩테스트 자료는 `Second Brain/30-Career/Dev/CodingTest/`로 분리됨.
-
 ## Tech Stack
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
