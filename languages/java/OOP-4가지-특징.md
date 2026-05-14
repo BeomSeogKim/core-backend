@@ -1,7 +1,13 @@
 ---
+id: 20260330-0000-oop-4가지-특징
+title: "OOP 4가지 특징"
+type: atomic
 tags: [java, oop]
 status: completed
+domain: career
+subdomain: dev
 created: 2026-03-30
+updated: 2026-05-14
 ---
 
 # OOP 4가지 특징
@@ -78,6 +84,8 @@ public class Account {
 - 내부 검증 로직(`amount > 0`)을 캡슐 안에 포함
 - 나중에 `balance` 저장 방식이 바뀌어도 외부 코드는 변경 불필요
 
+> **캡슐화 vs 정보 은닉**: 캡슐화(Encapsulation)는 데이터와 행위를 하나로 묶는 것(grouping). 정보 은닉(Information Hiding)은 내부 구현 세부사항을 외부에서 보이지 않게 하는 것(hiding). 모든 필드에 Getter/Setter를 달면 캡슐화는 되어도 **정보 은닉은 안 된 것**이다.
+
 ### 상속 (Inheritance)
 
 **상위 클래스의 속성과 메서드를 하위 클래스가 물려받아 재사용하거나 재정의(오버라이딩)**하는 것.
@@ -100,6 +108,8 @@ public class Dog extends Animal {
 - **확장**: 자식만의 고유 기능 추가 가능
 - Java는 **단일 상속**만 허용 (`extends` 하나)
 
+> **Composition over Inheritance**: 상속은 강한 결합을 만든다. 부모 클래스 변경이 모든 자식 클래스에 전파되므로, 재사용 목적의 상속보다 **인터페이스 + 조합(위임)** 을 선호하는 것이 실무 관행이다.
+
 ### 4가지 특징의 관계
 
 ```
@@ -112,8 +122,20 @@ public class Dog extends Animal {
   └─ 캡슐화 ──→ 내부 구현 숨기고 인터페이스만 노출
 ```
 
+## 4대 원칙과 SOLID의 연결
+
+4대 원칙이 OOP의 **"무엇"** 이라면, [[SOLID]] 5원칙은 **"어떻게 설계할 것인가"** 의 가이드라인이다.
+
+| OOP 원칙 | 뒷받침하는 SOLID | Spring 실현 |
+|----------|----------------|------------|
+| 추상화 | OCP, DIP | AOP (`@Aspect`), IoC 컨테이너 |
+| 다형성 | OCP, LSP | 전략 패턴 (`List<Interface>` 주입) |
+| 캡슐화 | SRP, ISP | 책임 단위 Bean 분리 |
+| 상속 | LSP | 인터페이스 계약 준수 |
+
 ## 관련 문서
 
 - [[SOLID]]
 - [[Interface-vs-Abstract-Class]]
 - [[접근제어자]]
+- [[오버로딩-vs-오버라이딩]]

@@ -1,7 +1,13 @@
 ---
+id: 20260330-0001-solid
+title: "SOLID 원칙"
+type: atomic
 tags: [java, oop, solid]
 status: completed
+domain: career
+subdomain: dev
 created: 2026-03-30
+updated: 2026-05-14
 ---
 
 # SOLID 원칙
@@ -168,8 +174,34 @@ ISP  인터페이스 분리 → 불필요한 의존 제거
 DIP  추상화에 의존 → 유연한 구조 완성
 ```
 
+## Spring에서의 실현
+
+SOLID 원칙들은 Spring 프레임워크 설계 곳곳에서 구체적으로 드러난다.
+
+| 원칙 | Spring 실현 | 설명 |
+|------|------------|------|
+| **DIP** | IoC 컨테이너 + 생성자 주입 | `@Autowired`로 구현체가 아닌 인터페이스에 의존. Spring이 적절한 구현체를 주입 |
+| **OCP** | AOP (`@Transactional`, `@Aspect`) | 기존 서비스 코드 변경 없이 트랜잭션/로깅/보안 추가 가능 |
+| **SRP** | Bean 단위 책임 분리 | Service / Repository / Controller 레이어 분리 자체가 SRP 적용 |
+| **ISP** | 역할별 인터페이스 | `ApplicationEventPublisher`, `MessageConverter` 등 역할별 인터페이스 |
+
+## 인터페이스 도입 안티패턴
+
+**ServiceImpl 패턴 남용**: 모든 서비스에 관성적으로 인터페이스를 추가하는 것은 DIP의 의도 오해다.
+
+```java
+// 구현체가 딱 하나, 교체 가능성 없음 → 불필요한 복잡성
+public interface UserService { ... }
+public class UserServiceImpl implements UserService { ... }
+```
+
+> **인터페이스 도입 기준**: ① 구현체 교체 가능성이 있거나 ② 테스트에서 Mock이 필요할 때
+> 두 조건 모두 없으면 구체 클래스에 직접 의존하는 것이 더 단순하다.
+
 ## 관련 문서
 
 - [[OOP-4가지-특징]]
 - [[Interface-vs-Abstract-Class]]
 - [[접근제어자]]
+- [[IoC-DI]]
+- [[AOP]]
