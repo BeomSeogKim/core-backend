@@ -41,6 +41,29 @@ C/C++ 방식
 > - 플랫폼별 테스트 필요
 > - 4개 배포 파일 관리
 
+### 컴파일 과정 전체 흐름
+
+```
+① .java 작성
+      ↓
+② javac 컴파일 (컴파일 타임)
+   - 어휘 분석(Lexical) → 구문 분석(Syntax) → 의미 분석(Semantic) → 바이트코드 생성
+   - 문법 오류는 여기서 검출 → 컴파일 타임 오류
+      ↓
+③ .class 바이트코드 생성
+   - 플랫폼 독립적 중간 언어 (기계어 ≠ 바이트코드)
+      ↓
+④ ClassLoader — JVM 메모리에 로드 (런타임)
+   - Loading → Linking(Verify/Prepare/Resolve) → Initialization
+      ↓
+⑤ Execution Engine — 바이트코드 → 기계어 변환 실행
+   - Interpreter: 초기 실행, 한 줄씩 해석
+   - JIT Compiler: 핫 코드 감지 → 네이티브 코드 캐싱 → 고속 재실행
+```
+
+> [!important] 바이트코드 ≠ 기계어
+> `.class` 파일은 CPU가 직접 실행할 수 없는 **바이트코드**다. 기계어(binary code)로의 변환은 JVM Execution Engine이 런타임에 수행한다. 이 구조 덕분에 플랫폼 독립성이 실현된다.
+
 ### JVM의 해결 전략: 중간 언어 (Intermediate Language)
 
 핵심 아이디어
